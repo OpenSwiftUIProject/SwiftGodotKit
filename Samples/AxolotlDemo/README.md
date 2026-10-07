@@ -53,7 +53,27 @@ inactive until the Godot scene is ready. The macOS OpenSwiftUI scene currently
 has a fixed 500 by 300 point content area. See the root README for the Xcode
 trait setup and the iOS 18 deployment requirement when using OpenSwiftUI.
 
-Build both destinations:
+To use OpenSwiftUI in Xcode, open `AxolotlDemo-OpenSwiftUI.xcodeproj`, select
+the `AxolotlDemo-macOS` scheme and **My Mac**, then press **Command-R**. This
+project enables the package trait, links OpenSwiftUI to the app, and sets the
+app's compilation condition and deployment target. Use the `AxolotlDemo-iOS`
+scheme for an iOS simulator or device.
+
+The project sets `DISABLE_DIAMOND_PROBLEM_DIAGNOSTIC=YES` to prevent Xcode 26.6
+from converting shared macro dependencies to dynamic frameworks. Without this
+setting, the host tools try to copy the same SwiftSyntax frameworks and the
+build fails with `Multiple commands produce`.
+
+The OpenSwiftUI project reuses `project.yml` through `project-openswiftui.yml`.
+To regenerate it with XcodeGen 2.46 or later, run:
+
+```sh
+make project-openswiftui
+```
+
+`AxolotlDemo.xcodeproj` continues to use Apple's SwiftUI.
+
+Build both native SwiftUI destinations:
 
 ```sh
 make build-macos

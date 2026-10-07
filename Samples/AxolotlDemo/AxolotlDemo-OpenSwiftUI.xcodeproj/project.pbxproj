@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6A15FFA30EEA36D4A1F6706B /* OpenSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4F5A65B3B4CFC6B28A860134 /* OpenSwiftUI */; };
+		74916E90AEB1915FEA51AB5F /* AxolotlDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3369616B5F08D71AB4524FD /* AxolotlDemoApp.swift */; };
+		8A8B2F9E6A5FAEA38619AE86 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = C54D0F14AF98BDE4F517AD1F /* LICENSE.txt */; };
+		984ED87709654FE93EC349BF /* main.pck in Resources */ = {isa = PBXBuildFile; fileRef = C664E08CF4CFD17407AB53B4 /* main.pck */; };
+		9B14A164605DC10FA7FC03A0 /* THIRD_PARTY.md in Resources */ = {isa = PBXBuildFile; fileRef = AC4647D5EBEEC2B0328016B0 /* THIRD_PARTY.md */; };
+		A011E06D5125F7FDB47FDB06 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 754F0266CC99C6FFBD0CC29C /* LICENSE */; };
+		A62D81CB259F44E0FDE131A9 /* SwiftGodotKit in Frameworks */ = {isa = PBXBuildFile; productRef = A8FA829DB18D4D0B015F35FE /* SwiftGodotKit */; };
+		AB782F67E3484FD1C9987CB9 /* SwiftGodotKit in Frameworks */ = {isa = PBXBuildFile; productRef = 24403411489CB5AF37D59F77 /* SwiftGodotKit */; };
+		BB022DA38CD90C68074A3E53 /* AxolotlDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3369616B5F08D71AB4524FD /* AxolotlDemoApp.swift */; };
+		BFB7CEA2978F6CFFBB7A64C3 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = C54D0F14AF98BDE4F517AD1F /* LICENSE.txt */; };
+		E001DFDE20C3175B1932E692 /* THIRD_PARTY.md in Resources */ = {isa = PBXBuildFile; fileRef = AC4647D5EBEEC2B0328016B0 /* THIRD_PARTY.md */; };
+		E1C8F529454CFF3486FA1337 /* main.pck in Resources */ = {isa = PBXBuildFile; fileRef = C664E08CF4CFD17407AB53B4 /* main.pck */; };
+		FB278B40CF7CA31DC8C259F9 /* OpenSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 536D26572124EC6A65AB6706 /* OpenSwiftUI */; };
+		FBCE6CD0A2C31170800BCA26 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 754F0266CC99C6FFBD0CC29C /* LICENSE */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		160B3D787EAEC94921504B91 /* SwiftGodotKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftGodotKit; path = ../..; sourceTree = SOURCE_ROOT; };
+		2DEB8BDC8081A5B2A9AE969B /* AxolotlDemo-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AxolotlDemo-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		754F0266CC99C6FFBD0CC29C /* LICENSE */ = {isa = PBXFileReference; path = LICENSE; sourceTree = "<group>"; };
+		AC4647D5EBEEC2B0328016B0 /* THIRD_PARTY.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = THIRD_PARTY.md; sourceTree = "<group>"; };
+		C3369616B5F08D71AB4524FD /* AxolotlDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AxolotlDemoApp.swift; sourceTree = "<group>"; };
+		C54D0F14AF98BDE4F517AD1F /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		C664E08CF4CFD17407AB53B4 /* main.pck */ = {isa = PBXFileReference; path = main.pck; sourceTree = "<group>"; };
+		EE18A39769DCC9C0F516DC8B /* AxolotlDemo-iOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "AxolotlDemo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A2E65AF5AAAF679EB600A4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A62D81CB259F44E0FDE131A9 /* SwiftGodotKit in Frameworks */,
+				FB278B40CF7CA31DC8C259F9 /* OpenSwiftUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A80A3ABAA804F5D4BB22A9DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB782F67E3484FD1C9987CB9 /* SwiftGodotKit in Frameworks */,
+				6A15FFA30EEA36D4A1F6706B /* OpenSwiftUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		390C06E6CD71F2BCAFF06949 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C54D0F14AF98BDE4F517AD1F /* LICENSE.txt */,
+			);
+			name = fonts;
+			path = GodotProject/fonts;
+			sourceTree = "<group>";
+		};
+		7BBE9A34F9965356F698AA3B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C664E08CF4CFD17407AB53B4 /* main.pck */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C5BEFE620B72A940252D756B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE18A39769DCC9C0F516DC8B /* AxolotlDemo-iOS.app */,
+				2DEB8BDC8081A5B2A9AE969B /* AxolotlDemo-macOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1DCCA30EA2956C5405780B9 = {
+			isa = PBXGroup;
+			children = (
+				FFC1E421E4B43642B02940BF /* App */,
+				390C06E6CD71F2BCAFF06949 /* fonts */,
+				EA2105FBD90BE04E6743E716 /* GodotProject */,
+				F7EBA2EBE22EE9353F73774D /* Packages */,
+				7BBE9A34F9965356F698AA3B /* Resources */,
+				C5BEFE620B72A940252D756B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA2105FBD90BE04E6743E716 /* GodotProject */ = {
+			isa = PBXGroup;
+			children = (
+				754F0266CC99C6FFBD0CC29C /* LICENSE */,
+				AC4647D5EBEEC2B0328016B0 /* THIRD_PARTY.md */,
+			);
+			path = GodotProject;
+			sourceTree = "<group>";
+		};
+		F7EBA2EBE22EE9353F73774D /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				160B3D787EAEC94921504B91 /* SwiftGodotKit */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		FFC1E421E4B43642B02940BF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C3369616B5F08D71AB4524FD /* AxolotlDemoApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37FFBB88EE6BF26CD666373F /* AxolotlDemo-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71EAF817E079B650FE2571C9 /* Build configuration list for PBXNativeTarget "AxolotlDemo-iOS" */;
+			buildPhases = (
+				4734F1C4FFA776A8C34C3841 /* Sources */,
+				C047100742FF6A997A31A7D0 /* Resources */,
+				A80A3ABAA804F5D4BB22A9DC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AxolotlDemo-iOS";
+			packageProductDependencies = (
+				24403411489CB5AF37D59F77 /* SwiftGodotKit */,
+				4F5A65B3B4CFC6B28A860134 /* OpenSwiftUI */,
+			);
+			productName = "AxolotlDemo-iOS";
+			productReference = EE18A39769DCC9C0F516DC8B /* AxolotlDemo-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AAF0AF9EA38A38234A08059D /* AxolotlDemo-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 380032C674B1CB0017ACFF60 /* Build configuration list for PBXNativeTarget "AxolotlDemo-macOS" */;
+			buildPhases = (
+				B177A5EB43519C7E108A270E /* Sources */,
+				64BF91422158773198A20105 /* Resources */,
+				7A2E65AF5AAAF679EB600A4E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AxolotlDemo-macOS";
+			packageProductDependencies = (
+				A8FA829DB18D4D0B015F35FE /* SwiftGodotKit */,
+				536D26572124EC6A65AB6706 /* OpenSwiftUI */,
+			);
+			productName = "AxolotlDemo-macOS";
+			productReference = 2DEB8BDC8081A5B2A9AE969B /* AxolotlDemo-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA557CBCB8BF556735B7896F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					37FFBB88EE6BF26CD666373F = {
+						ProvisioningStyle = Automatic;
+					};
+					AAF0AF9EA38A38234A08059D = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1C73CCD4E8CBEF4CF88EFC75 /* Build configuration list for PBXProject "AxolotlDemo-OpenSwiftUI" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = E1DCCA30EA2956C5405780B9;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A2CFA7A36108362BD6AB4723 /* XCRemoteSwiftPackageReference "OpenSwiftUI-spm" */,
+				0F753561FF9ACEC48ED43C97 /* XCLocalSwiftPackageReference "../.." */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C5BEFE620B72A940252D756B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAF0AF9EA38A38234A08059D /* AxolotlDemo-macOS */,
+				37FFBB88EE6BF26CD666373F /* AxolotlDemo-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		64BF91422158773198A20105 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A011E06D5125F7FDB47FDB06 /* LICENSE in Resources */,
+				BFB7CEA2978F6CFFBB7A64C3 /* LICENSE.txt in Resources */,
+				9B14A164605DC10FA7FC03A0 /* THIRD_PARTY.md in Resources */,
+				984ED87709654FE93EC349BF /* main.pck in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C047100742FF6A997A31A7D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBCE6CD0A2C31170800BCA26 /* LICENSE in Resources */,
+				8A8B2F9E6A5FAEA38619AE86 /* LICENSE.txt in Resources */,
+				E001DFDE20C3175B1932E692 /* THIRD_PARTY.md in Resources */,
+				E1C8F529454CFF3486FA1337 /* main.pck in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4734F1C4FFA776A8C34C3841 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB022DA38CD90C68074A3E53 /* AxolotlDemoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B177A5EB43519C7E108A270E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74916E90AEB1915FEA51AB5F /* AxolotlDemoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1FCE3CAD4616515DD80A9DD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Axolotl OpenSwiftUI";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "$(inherited) -ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.swiftgodotkit.axolotl.openswiftui.macos;
+				PRODUCT_NAME = "AxolotlDemo-OpenSwiftUI";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) OpenSwiftUI";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7844FBE78F60B62B615CFEE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Axolotl OpenSwiftUI";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "$(inherited) -ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.swiftgodotkit.axolotl.openswiftui.ios;
+				PRODUCT_NAME = "AxolotlDemo-OpenSwiftUI";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) OpenSwiftUI";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		90DF8386EEA5BE1F42C9DC50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DISABLE_DIAMOND_PROBLEM_DIAGNOSTIC = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B276B6CF68AF3174FC029BBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Axolotl OpenSwiftUI";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "$(inherited) -ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.swiftgodotkit.axolotl.openswiftui.ios;
+				PRODUCT_NAME = "AxolotlDemo-OpenSwiftUI";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) OpenSwiftUI";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D14E9F0B5D20AFBDBFE9767B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DISABLE_DIAMOND_PROBLEM_DIAGNOSTIC = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D239D0D7868C535EDA6A6C29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Axolotl OpenSwiftUI";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "$(inherited) -ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.swiftgodotkit.axolotl.openswiftui.macos;
+				PRODUCT_NAME = "AxolotlDemo-OpenSwiftUI";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) OpenSwiftUI";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C73CCD4E8CBEF4CF88EFC75 /* Build configuration list for PBXProject "AxolotlDemo-OpenSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D14E9F0B5D20AFBDBFE9767B /* Debug */,
+				90DF8386EEA5BE1F42C9DC50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		380032C674B1CB0017ACFF60 /* Build configuration list for PBXNativeTarget "AxolotlDemo-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FCE3CAD4616515DD80A9DD7 /* Debug */,
+				D239D0D7868C535EDA6A6C29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		71EAF817E079B650FE2571C9 /* Build configuration list for PBXNativeTarget "AxolotlDemo-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7844FBE78F60B62B615CFEE7 /* Debug */,
+				B276B6CF68AF3174FC029BBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		0F753561FF9ACEC48ED43C97 /* XCLocalSwiftPackageReference "../.." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../..;
+			traits = (
+				OpenSwiftUI,
+			);
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A2CFA7A36108362BD6AB4723 /* XCRemoteSwiftPackageReference "OpenSwiftUI-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OpenSwiftUIProject/OpenSwiftUI-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.23.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		24403411489CB5AF37D59F77 /* SwiftGodotKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftGodotKit;
+		};
+		4F5A65B3B4CFC6B28A860134 /* OpenSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2CFA7A36108362BD6AB4723 /* XCRemoteSwiftPackageReference "OpenSwiftUI-spm" */;
+			productName = OpenSwiftUI;
+		};
+		536D26572124EC6A65AB6706 /* OpenSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2CFA7A36108362BD6AB4723 /* XCRemoteSwiftPackageReference "OpenSwiftUI-spm" */;
+			productName = OpenSwiftUI;
+		};
+		A8FA829DB18D4D0B015F35FE /* SwiftGodotKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftGodotKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = EA557CBCB8BF556735B7896F /* Project object */;
+}

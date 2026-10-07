@@ -70,7 +70,11 @@ let package = Package(
             name: "AxolotlDemo",
             dependencies: ["SwiftGodotKit", openSwiftUIDependency],
             path: "Samples/AxolotlDemo",
-            exclude: ["AxolotlDemo.xcodeproj", "GodotProject", "Scripts", "Makefile", "README.md", "project.yml"],
+            exclude: [
+                "AxolotlDemo.xcodeproj", "AxolotlDemo-OpenSwiftUI.xcodeproj",
+                "GodotProject", "Scripts", "Makefile", "README.md",
+                "project.yml", "project-openswiftui.yml",
+            ],
             sources: ["App"],
             resources: [.copy("Resources/main.pck")]
         ),

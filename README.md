@@ -81,6 +81,10 @@ add the OpenSwiftUI product to the app target. If the app uses `#if OpenSwiftUI`
 also add `OpenSwiftUI` to its active compilation conditions. Set the app's
 deployment target to macOS 15 or iOS 18, or later.
 
+The Axolotl sample includes a configured
+[`AxolotlDemo-OpenSwiftUI.xcodeproj`](Samples/AxolotlDemo/AxolotlDemo-OpenSwiftUI.xcodeproj).
+Open it, select the `AxolotlDemo-macOS` scheme and **My Mac**, then run the app.
+
 ## Sample
 
 A simple SwiftUI API is provided.

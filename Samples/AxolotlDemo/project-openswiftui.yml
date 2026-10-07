@@ -1,0 +1,47 @@
+include: project.yml
+
+name: AxolotlDemo-OpenSwiftUI
+
+options:
+  minimumXcodeGenVersion: 2.46.0
+
+settings:
+  base:
+    # Xcode 26.6 otherwise makes shared macro dependencies dynamic and schedules
+    # duplicate framework copies from the host tools.
+    DISABLE_DIAMOND_PROBLEM_DIAGNOSTIC: YES
+
+packages:
+  SwiftGodotKit:
+    traits:
+      - OpenSwiftUI
+  OpenSwiftUI:
+    url: https://github.com/OpenSwiftUIProject/OpenSwiftUI-spm.git
+    from: 0.23.1
+
+targets:
+  AxolotlDemo-macOS:
+    deploymentTarget: "15.0"
+    dependencies:
+      - package: OpenSwiftUI
+        product: OpenSwiftUI
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.swiftgodotkit.axolotl.openswiftui.macos
+        PRODUCT_NAME: AxolotlDemo-OpenSwiftUI
+        INFOPLIST_KEY_CFBundleDisplayName: Axolotl OpenSwiftUI
+        SWIFT_ACTIVE_COMPILATION_CONDITIONS: $(inherited) OpenSwiftUI
+        MACOSX_DEPLOYMENT_TARGET: 15.0
+
+  AxolotlDemo-iOS:
+    deploymentTarget: "18.0"
+    dependencies:
+      - package: OpenSwiftUI
+        product: OpenSwiftUI
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.swiftgodotkit.axolotl.openswiftui.ios
+        PRODUCT_NAME: AxolotlDemo-OpenSwiftUI
+        INFOPLIST_KEY_CFBundleDisplayName: Axolotl OpenSwiftUI
+        SWIFT_ACTIVE_COMPILATION_CONDITIONS: $(inherited) OpenSwiftUI
+        IPHONEOS_DEPLOYMENT_TARGET: 18.0
