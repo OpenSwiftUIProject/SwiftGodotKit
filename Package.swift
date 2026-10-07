@@ -1,5 +1,12 @@
-// swift-tools-version: 5.9
+// swift-tools-version: 6.3
 import PackageDescription
+
+let openSwiftUIDependency: Target.Dependency = .product(
+    name: "OpenSwiftUI",
+    package: "OpenSwiftUI-spm",
+    condition: .when(traits: ["OpenSwiftUI"])
+)
+
 let macLibgodotTarget: Target = .binaryTarget(
     name: "mac_libgodot",
     url: "https://github.com/migueldeicaza/godot/releases/download/v4.7.3-rc-swiftgodotkit.1/libgodot-macos.xcframework.zip",
@@ -24,9 +31,14 @@ let package = Package(
             name: "SwiftGodotKit",
             targets: ["SwiftGodotKit"]),
         .executable(name: "TrivialSample", targets: ["TrivialSample"]),
+        .executable(name: "AxolotlDemo", targets: ["AxolotlDemo"]),
+    ],
+    traits: [
+        .trait(name: "OpenSwiftUI", description: "Use OpenSwiftUI for the library and samples."),
     ],
     dependencies: [
         .package(url: "https://github.com/migueldeicaza/SwiftGodot", revision: "c3303eadffe4413eaab359983ff7cd759fd7f351"),
+        .package(url: "https://github.com/OpenSwiftUIProject/OpenSwiftUI-spm.git", from: "0.23.1"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -36,6 +48,7 @@ let package = Package(
             dependencies: [
                 "SwiftGodot",
                 "libgodot",
+                openSwiftUIDependency,
                 .target(name: "apple_plugin_stubs", condition: .when(platforms: [.iOS])),
                 .target(name: "mac_libgodot", condition: .when(platforms: [.macOS])),
                 .target(name: "ios_libgodot", condition: .when(platforms: [.iOS])),
@@ -44,13 +57,22 @@ let package = Package(
 
         .executableTarget(
             name: "TrivialSample",
-            dependencies: ["SwiftGodotKit"],
+            dependencies: ["SwiftGodotKit", openSwiftUIDependency],
             resources: [
                 .copy("main.pck"),
                 .copy("AxolotlDemo-LICENSE.txt"),
                 .copy("THIRD_PARTY.md"),
                 .copy("Xolonium-OFL.txt"),
             ]
+        ),
+
+        .executableTarget(
+            name: "AxolotlDemo",
+            dependencies: ["SwiftGodotKit", openSwiftUIDependency],
+            path: "Samples/AxolotlDemo",
+            exclude: ["AxolotlDemo.xcodeproj", "GodotProject", "Scripts", "Makefile", "README.md", "project.yml"],
+            sources: ["App"],
+            resources: [.copy("Resources/main.pck")]
         ),
 
         .target(
@@ -64,5 +86,6 @@ let package = Package(
         .systemLibrary(
             name: "libgodot"
         ),
-    ]
+    ],
+    swiftLanguageModes: [.v5]
 )

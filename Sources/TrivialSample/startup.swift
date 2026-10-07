@@ -5,7 +5,11 @@
 //
 //  Created by Miguel de Icaza on 4/1/23.
 //
+#if OpenSwiftUI
+import OpenSwiftUI
+#else
 import SwiftUI
+#endif
 import SwiftGodot
 import SwiftGodotKit
 
@@ -38,7 +42,7 @@ struct testAppkitUIApp: App {
     )
 
     var body: some Scene {
-        #if os(macOS)
+        #if os(macOS) && !OpenSwiftUI
         Window("Axolotl Demo", id: "main") {
             ContentView(app: godotApp)
         }

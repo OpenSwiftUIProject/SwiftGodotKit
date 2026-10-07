@@ -4,11 +4,20 @@
 //
 
 import OSLog
+import QuartzCore
+#if OpenSwiftUI
+import OpenSwiftUI
+#else
 import SwiftUI
+#endif
 import SwiftGodot
 #if os(macOS)
 public struct GodotAppView: NSViewRepresentable {
+    #if OpenSwiftUI
+    @OpenSwiftUI.Environment(\.godotApp) var app: GodotApp?
+    #else
     @SwiftUI.Environment(\.godotApp) var app: GodotApp?
+    #endif
     var view = NSGodotAppView(frame: CGRect.zero)
     let source: String?
     let scene: String?

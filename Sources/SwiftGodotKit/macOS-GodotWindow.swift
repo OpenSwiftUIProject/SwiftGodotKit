@@ -3,11 +3,19 @@
 //
 //
 #if os(macOS)
+#if OpenSwiftUI
+import OpenSwiftUI
+#else
 import SwiftUI
+#endif
 import SwiftGodot
 
 public struct GodotWindow: NSViewRepresentable {
+    #if OpenSwiftUI
+    @OpenSwiftUI.Environment(\.godotApp) var app: GodotApp?
+    #else
     @SwiftUI.Environment(\.godotApp) var app: GodotApp?
+    #endif
     let callback: ((SwiftGodot.Window)->())?
     let node: String?
     var view = NSGodotWindow()

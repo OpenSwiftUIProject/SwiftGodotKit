@@ -5,12 +5,22 @@
 #if os(iOS)
 
 import OSLog
+import QuartzCore
+import UIKit
+#if OpenSwiftUI
+import OpenSwiftUI
+#else
 import SwiftUI
+#endif
 import SwiftGodot
 
 public struct GodotWindow: UIViewRepresentable {
     let node: String?
+    #if OpenSwiftUI
+    @OpenSwiftUI.Environment(\.godotApp) var app: GodotApp?
+    #else
     @SwiftUI.Environment(\.godotApp) var app: GodotApp?
+    #endif
     var view = UIGodotWindow()
 
     public init(node: String? = nil, callback: ((SwiftGodot.Window)->())?) {

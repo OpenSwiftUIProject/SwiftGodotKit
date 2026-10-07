@@ -38,6 +38,49 @@ instructions.
 
 Just reference this module from your Package.swift file or from Xcode.
 
+## OpenSwiftUI
+
+SwiftGodotKit uses Apple's SwiftUI by default. Enable the `OpenSwiftUI` package
+trait to use [OpenSwiftUI-spm](https://github.com/OpenSwiftUIProject/OpenSwiftUI-spm)
+instead. The package requires Swift 6.3. OpenSwiftUI 0.23.1 requires Xcode 26.6
+or a compatible toolchain, macOS 15 or later, and iOS 18 or later.
+
+To use a local checkout with the trait enabled:
+
+```swift
+.package(path: "../SwiftGodotKit", traits: ["OpenSwiftUI"])
+```
+
+Client views must import `OpenSwiftUI`. Observable models used by those views
+must import `OpenObservation` and use its `@Observable` macro. Use scoped SDK
+imports in those files to avoid conflicts with Apple's Observation macros.
+For details, see the
+[SwiftUI library integration guide](https://github.com/OpenSwiftUIProject/OpenSwiftUI-spm/blob/main/Docs/SwiftUILibraryIntegration.md).
+
+Run the existing samples from the package directory:
+
+```sh
+swift run --traits OpenSwiftUI \
+  -Xswiftc -target -Xswiftc "$(uname -m)-apple-macosx15.0" TrivialSample
+swift run --traits OpenSwiftUI \
+  -Xswiftc -target -Xswiftc "$(uname -m)-apple-macosx15.0" AxolotlDemo
+```
+
+The compiler flags set the executable's minimum OS version without raising the
+library's default deployment target. Omit these flags and `--traits OpenSwiftUI`
+to use Apple's SwiftUI. The OpenSwiftUI samples use `WindowGroup`, since this
+release does not provide `Window`. Its macOS scene currently uses a fixed
+500 by 300 point content area, so these samples omit the native SwiftUI minimum
+window size to keep their content visible. With the trait enabled, the Axolotl
+demo uses `Text.onTapGesture` for **Restart game**
+because OpenSwiftUI does not yet support `Button`. The action stays inactive
+until the Godot scene is ready.
+
+For an Xcode app, enable `OpenSwiftUI` in the SwiftGodotKit package's traits and
+add the OpenSwiftUI product to the app target. If the app uses `#if OpenSwiftUI`,
+also add `OpenSwiftUI` to its active compilation conditions. Set the app's
+deployment target to macOS 15 or iOS 18, or later.
+
 ## Sample
 
 A simple SwiftUI API is provided.

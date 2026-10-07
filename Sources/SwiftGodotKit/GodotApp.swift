@@ -3,15 +3,35 @@
 //
 //
 
+#if OpenSwiftUI
+import OpenObservation
+import OpenSwiftUI
+// Scoped imports keep the SDK's Observation macros out of macro lookup.
+import class Foundation.Bundle
+import class Foundation.FileManager
+import class Foundation.NSString
+import class Foundation.Thread
+import struct Foundation.ObjCBool
+import struct Foundation.URL
+import struct Foundation.UUID
+import struct OSLog.Logger
+#else
 import SwiftUI
-import SwiftGodot
 import Foundation
 import OSLog
+#endif
+import SwiftGodot
+import Combine
 #if canImport(Dispatch)
 import Dispatch
 #endif
 #if os(iOS)
-import UIKit
+import class Foundation.NotificationCenter
+import protocol Foundation.NSObjectProtocol
+import class UIKit.UIApplication
+import class UIKit.UITouch
+#elseif os(macOS)
+import class AppKit.NSApplication
 #endif
 
 public final class GodotAppViewHandle {

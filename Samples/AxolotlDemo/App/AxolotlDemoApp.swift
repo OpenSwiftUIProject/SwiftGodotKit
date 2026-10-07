@@ -1,13 +1,24 @@
+import class Foundation.Bundle
+import Dispatch
 import SwiftGodot
 import SwiftGodotKit
+#if OpenSwiftUI
+import OpenObservation
+import OpenSwiftUI
+#else
 import SwiftUI
+#endif
 
 @main
 struct AxolotlDemoApp: App {
+    #if SWIFT_PACKAGE
+    @State private var app = GodotApp(packFile: "main.pck", godotPackPath: Bundle.module.resourcePath)
+    #else
     @State private var app = GodotApp(packFile: "main.pck")
+    #endif
 
     var body: some Scene {
-        #if os(macOS)
+        #if os(macOS) && !OpenSwiftUI
         Window("Axolotl Demo", id: "main") {
             AxolotlGameView(app: app)
         }
@@ -27,12 +38,23 @@ private struct AxolotlGameView: View {
         VStack(spacing: 0) {
             HStack {
                 Text("Score: \(game.score)")
+                    #if !OpenSwiftUI
                     .accessibilityAddTraits(.updatesFrequently)
+                    #endif
                 Spacer()
+                #if OpenSwiftUI
+                Text("Restart game")
+                    .onTapGesture {
+                        guard game.isReady else { return }
+                        game.restart(in: app)
+                    }
+                    .opacity(game.isReady ? 1 : 0.5)
+                #else
                 Button("Restart game") {
                     game.restart(in: app)
                 }
                 .disabled(!game.isReady)
+                #endif
             }
             .padding()
 
@@ -45,7 +67,7 @@ private struct AxolotlGameView: View {
         .onDisappear {
             game.disconnect(in: app)
         }
-        #if os(macOS)
+        #if os(macOS) && !OpenSwiftUI
         .frame(minWidth: 480, minHeight: 720)
         #endif
     }
